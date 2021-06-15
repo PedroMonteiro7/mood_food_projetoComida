@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("img/macarons-2548827_960_720.webp");
+    background-color: #00000055; /* Hexadecimal para trabalhar com a opacidade */
+    background-blend-mode: darken; /* Mistura a cor do fundo (no caso preto) com a imagem, escurecendo-a */
+    background-size: cover; /* Amplia a imagem  o máximo possível sem distorcê-la */
+    background-position: right top; /* Fixa o lado direito superior da imagem conforme a redefinição de tamanho da página */
+    display: flex;
+    flex-direction: column;
+    font-family: 'Karla', sans-serif;
+    color: white;
+}
