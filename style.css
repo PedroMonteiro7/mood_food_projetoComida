@@ -2,13 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style-type: none;
 }
 
 body {
     width: 100vw;
     height: 100vh;
     background-image: url("img/macarons-2548827_960_720.webp");
-    background-color: #00000055; /* Hexadecimal para trabalhar com a opacidade */
+    background-color: #000000b7; /* Hexadecimal para trabalhar com a opacidade */
     background-blend-mode: darken; /* Mistura a cor do fundo (no caso preto) com a imagem, escurecendo-a */
     background-size: cover; /* Amplia a imagem  o máximo possível sem distorcê-la */
     background-position: right top; /* Fixa o lado direito superior da imagem conforme a redefinição de tamanho da página */
@@ -16,4 +17,77 @@ body {
     flex-direction: column;
     font-family: 'Karla', sans-serif;
     color: white;
+    overflow: hidden; /* tira a barra de rolagem */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10vw; /* Também poderia ser feito por cada lado (padding-left e padding-right)  */
+    align-items: center;
+    margin-top: 30px;
+}
+
+.links > ul {
+    display: flex;
+    gap: 30px; /* Dá um espaço entre os itens, separando-os */
+}
+
+.links a {
+    color: white;
+    text-decoration: none; /* Tira o sublinhado */
+    font-size: 20px;
+    user-select: none; /* Impossibilita a seleção do texto */
+    transition: all .75s; /* É uma transição para mudar do branco para o vermelho mais delicadamente, de forma gradativa */
+}
+
+.links a:hover { /* Efeito ao passar o mouse */
+    color: rgb(30, 175, 30); /* Efeito de mudança de cor */
+}
+
+main {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25vh 10vw;
+    /* flex-grow: 1; */
+}
+
+main h2 {
+    font-size: 70px;
+}
+
+main h1 {
+    font-size: 100px;
+    color:rgb(7, 197, 7);
+}
+
+main p {
+    font-size: 25px;
+    font-weight: 200;
+    max-width: 700px; /* Largura máxima, quebra o texto */
+}
+
+/* Botão "Veja o trailer" */
+main a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    width: 200px;
+    height: 50px;
+    background-color: rgb(7, 197, 7);
+    margin-top: 30px; /* Espaçamento  entre o texto (p) e o botão */
+    border-radius: 40px; /* Propriedade que arredonda */
+    transition: all .5s;
+
+}
+
+/* Efeito do botão "Veja o Trailer" */
+main a:hover {
+    border: solid 1px rgb(7, 197, 7); /* Serve para, nesse caso, manter uma borda da cor anterior ao efeito */
+    background-color: black;
 }
