@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    list-style-type: none;
+    list-style-type: none; /* tira os maracdores de tópicos da lista */
 }
 
 body {
@@ -25,7 +25,19 @@ header {
     justify-content: space-between;
     padding: 0 10vw; /* Também poderia ser feito por cada lado (padding-left e padding-right)  */
     align-items: center;
-    margin-top: 30px;
+    margin-top: 20px;
+}
+
+.logo {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(7, 197, 7);
+    font-size: 3em; color: #fffdd900;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(7, 197, 7);
+    font-size: 40px; color: #fffdd900;
+    font-family: 'Bauhaus 93';
+    text-shadow: 0.1em 0.1em 0.3em #000; /* sombreado */
+    text-decoration: none; /* Tira o sublinhado */
 }
 
 .links > ul {
@@ -42,7 +54,7 @@ header {
 }
 
 .links a:hover { /* Efeito ao passar o mouse */
-    color: rgb(30, 175, 30); /* Efeito de mudança de cor */
+    color: rgb(7, 197, 7); /* Efeito de mudança de cor */
 }
 
 main {
@@ -50,8 +62,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 25vh 10vw;
-    /* flex-grow: 1; */
+    padding: 15vh 10vw;
 }
 
 main h2 {
@@ -59,17 +70,19 @@ main h2 {
 }
 
 main h1 {
-    font-size: 100px;
+    margin-top: 10px;
+    font-size: 90px;
     color:rgb(7, 197, 7);
 }
 
 main p {
-    font-size: 25px;
+    font-size: 20px;
+    align-items: center;
     font-weight: 200;
-    max-width: 700px; /* Largura máxima, quebra o texto */
+    max-width: 600px; /* Largura máxima, quebra o texto */
 }
 
-/* Botão "Veja o trailer" */
+/* Botão "BOOK TABLE" */
 main a {
     display: flex;
     justify-content: center;
@@ -80,14 +93,23 @@ main a {
     width: 200px;
     height: 50px;
     background-color: rgb(7, 197, 7);
-    margin-top: 30px; /* Espaçamento  entre o texto (p) e o botão */
+    margin-top: 50px; /* Espaçamento  entre o texto (p) e o botão */
     border-radius: 40px; /* Propriedade que arredonda */
     transition: all .5s;
 
 }
 
-/* Efeito do botão "Veja o Trailer" */
+/* Efeito do botão "BOOK TABLE" */
 main a:hover {
     border: solid 1px rgb(7, 197, 7); /* Serve para, nesse caso, manter uma borda da cor anterior ao efeito */
-    background-color: black;
+    background-color: rgb(82, 33, 61);
+}
+
+.icones {
+    transform: rotate(270deg); /* gira o texto, o colocando na vertical */
+    display: flex;
+    right: -120px;
+    position: absolute;
+    width: 350px;
+    justify-content: space-between;
 }
